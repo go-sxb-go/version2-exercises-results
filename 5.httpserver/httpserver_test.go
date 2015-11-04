@@ -10,7 +10,7 @@ import (
 func TestHttpServer(t *testing.T) {
 	go HttpServer("12345")
 	time.Sleep(time.Second)
-	res, err := http.Get("localhost:12345")
+	res, err := http.Get("http://localhost:12345")
 	if err != nil {
 		t.Fatal("expected no error, got", err)
 	}
